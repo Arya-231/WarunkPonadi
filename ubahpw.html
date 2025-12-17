@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah Password</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .change-password-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .change-password-container h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-floating {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 18px;
+            font-size: 1.1rem;
+            font-family: 'poppins';
+            background-color: #f7f8fa;
+            border: 1px solid #ddd;
+            color: #555;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: none;
+        }
+
+        .form-floating label {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .btn-submit {
+            background-color: #FFCA2C;
+            color: rgb(0, 0, 0);
+            font-size: 1.2rem;
+            font-family: 'poppins';
+            padding: 12px;
+            border-radius: 25px;
+            width: 100%;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #DDA15E;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .form-footer a {
+            color: #FFCA2C;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .form-footer a:hover {
+            color: #DDA15E;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="change-password-container" style="font-family: poppins;">
+        <h2>Ubah Kata Sandi</h2>
+        <form>
+            <!-- Kata Sandi Saat Ini -->
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="currentPassword" placeholder="Kata Sandi Saat Ini" required>
+                <label for="currentPassword">Kata Sandi Saat Ini</label>
+            </div>
+
+            <!-- Kata Sandi Baru -->
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="newPassword" placeholder="Kata Sandi Baru" required>
+                <label for="newPassword">Kata Sandi Baru</label>
+            </div>
+
+            <!-- Konfirmasi Kata Sandi Baru -->
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="confirmNewPassword" placeholder="Konfirmasi Kata Sandi Baru" required>
+                <label for="confirmNewPassword">Konfirmasi kata Sandi Baru</label>
+            </div>
+
+            <!-- Tombol Ubah Kata Sandi -->
+            <button type="submit" class="btn btn-submit">Simpan Perubahan</button>
+        </form>
+        <div class="form-footer">
+            <p><a href="Landingpage.html">Kembali ke Beranda</a></p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>

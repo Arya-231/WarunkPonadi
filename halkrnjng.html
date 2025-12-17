@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .cart-container {
+            padding: 50px 0;
+        }
+
+        .cart-item {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .cart-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .cart-item img {
+            max-width: 120px;
+            border-radius: 10px;
+        }
+
+        .cart-item-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .cart-item-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .cart-item-price {
+            font-size: 1.2rem;
+            color: #007bff;
+            font-weight: 700;
+        }
+
+        .cart-item-quantity input {
+            max-width: 60px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .cart-item-remove {
+            color: #dc3545;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .cart-item-remove:hover {
+            color: #c82333;
+        }
+
+        .cart-summary {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .cart-summary h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .cart-summary .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .btn-checkout {
+            background-color: #28a745;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px;
+            border-radius: 25px;
+            width: 100%;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-checkout:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container cart-container">
+        <div class="row">
+            <!-- Kolom Item Keranjang -->
+            <div class="col-md-8">
+                <!-- Item 1 -->
+                <div class="cart-item d-flex align-items-center">
+                    <img src="https://via.placeholder.com/120" alt="Product Image">
+                    <div class="cart-item-details w-100">
+                        <div class="cart-item-title">Product 1</div>
+                        <div class="cart-item-quantity">
+                            <input type="number" value="1" min="1">
+                        </div>
+                        <div class="cart-item-price">$49.99</div>
+                        <div class="cart-item-remove">Remove</div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="cart-item d-flex align-items-center">
+                    <img src="https://via.placeholder.com/120" alt="Product Image">
+                    <div class="cart-item-details w-100">
+                        <div class="cart-item-title">Product 2</div>
+                        <div class="cart-item-quantity">
+                            <input type="number" value="2" min="1">
+                        </div>
+                        <div class="cart-item-price">$29.99</div>
+                        <div class="cart-item-remove">Remove</div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="cart-item d-flex align-items-center">
+                    <img src="https://via.placeholder.com/120" alt="Product Image">
+                    <div class="cart-item-details w-100">
+                        <div class="cart-item-title">Product 3</div>
+                        <div class="cart-item-quantity">
+                            <input type="number" value="1" min="1">
+                        </div>
+                        <div class="cart-item-price">$19.99</div>
+                        <div class="cart-item-remove">Remove</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kolom Ringkasan Keranjang -->
+            <div class="col-md-4">
+                <div class="cart-summary">
+                    <h4>Order Summary</h4>
+                    <p>Total Items: 4</p>
+                    <p class="price">Total Price: $99.97</p>
+                    <button type="button" class="btn btn-checkout">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
